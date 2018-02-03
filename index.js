@@ -15,7 +15,7 @@ $(document).ready(() => {
             let city = data.name;
             let country = data.sys.country;
             $('#icon').html(chooseIcon(weather));
-            $('#temp').html(Math.floor(temp) + '&deg; C');
+            $('#temp').html(Math.round(temp) + '&deg; C');
             $('#city').text(city + ', ' + country);
 
           });
@@ -57,5 +57,5 @@ function changeTemp(temperature) {
   }
   fShow = !fShow;
   let tempCF = fShow ? 'F' : 'C';
-  $('#temp').html(Math.floor(newTemp) + '&deg; ' + tempCF);
+  $('#temp').html(Math.round(newTemp) + '&deg; ' + tempCF);
 }
